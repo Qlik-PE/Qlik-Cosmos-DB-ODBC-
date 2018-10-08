@@ -106,8 +106,7 @@ immediate insights and explore in any direction your intuition takes
 you. Unlike query-based tools, there's no pre-aggregated data and
 predefined queries to hold you back. That means you can ask new
 questions and create analytics without having to build new queries or
-wait for the experts. ![](./media/image2.png){width="6.5in"
-height="2.4298611111111112in"}
+wait for the experts. ![](./media/image2.png)
 
 **Interactive analysis, without boundaries**
 
@@ -143,25 +142,22 @@ documentDB) as our query engine for Qlik.
 
 ### Step 1. Sign into the Azure Portal -- Navigate to Cosmos DB
 
-![](./media/image3.png){width="2.9499376640419945in"
-height="1.3833333333333333in"}
+![](./media/image3.png)
 
 ### Step 2. Add a new Cosmos DB instance
 
-![](./media/image4.png){width="2.6666666666666665in"
-height="1.0146751968503938in"}
+![](./media/image4.png)
 
 ### Step 3. Complete Project Details
 
 \- For this use case, we are selecting the SQL API.
 
-![](./media/image5.png){width="3.05in" height="2.7929002624671915in"}
+![](./media/image5.png)
 
 ### Step 4. Validate and Create! 
 
 The process will run for a few minutes and we have our database!
-![](./media/image6.png){width="3.6742989938757655in"
-height="3.2766415135608047in"}
+![](./media/image6.png)
 
 Conversation - What is a RU?
 ----------------------------
@@ -179,8 +175,7 @@ setup process as certain element cannot be changed after creation.
 Step 5. Create Database and Collection
 --------------------------------------
 
-![](./media/image7.png){width="3.3472222222222223in"
-height="1.6166666666666667in"}Before we can load data, we need to create
+![](./media/image7.png)Before we can load data, we need to create
 the repository inside Cosmos DB that we'll need to write data into. We
 start by opening [Data Explorer]{.underline} in the menu.
 
@@ -207,8 +202,7 @@ proceed.
 Navigate to the unzipped folder, and run DTUI.exe. This will spawn the
 loader utility UI.
 
-![](./media/image8.png){width="3.283333333333333in"
-height="2.463552055993001in"}
+![](./media/image8.png)
 
 #### Source Information
 
@@ -216,14 +210,14 @@ Select CSV File from the drop down in Source information setting...
 Notice the utility supports a wide range of data source files and
 connections as sources.
 
-![](./media/image9.png){width="4.175in" height="2.1753707349081366in"}
+![](./media/image9.png)
 
 #### Target Information
 
 We will need to collect some information from our Cosmos DB system to
 populate the required fields.
 
-![](./media/image10.png){width="6.5in" height="1.6402777777777777in"}
+![](./media/image10.png)
 
 [Connection String]{.underline}: This is the PRIMARY CONNECTION STRING
 from the Read-Write Keys section of the Keys menu. NOTE: to get it to
@@ -235,8 +229,7 @@ Our connection string looks like:
 [Collection]{.underline}: This is the name of the collection we created
 earlier.
 
-![](./media/image11.png){width="5.266666666666667in"
-height="2.6839741907261594in"}
+![](./media/image11.png)
 
 Click next a few times, and "Import" to begin the data transfer. This
 may take a few minutes...
@@ -244,8 +237,7 @@ may take a few minutes...
 We can look in our Data Explorer and find that indeed the data has
 loaded!
 
-![](./media/image12.png){width="5.608333333333333in"
-height="2.232548118985127in"}
+![](./media/image12.png)
 
 We have now completed our Cosmos DB setup.
 
@@ -288,41 +280,34 @@ Creating the Qlik Sense App
 
 ### Step 1. Open Qlik Sense and create a new App
 
-![](./media/image13.png){width="2.287037401574803in"
-height="0.914086832895888in"}
+![](./media/image13.png)
 
 ### Step 2. Select - Add data from Files and other sources
 
-![](./media/image14.png){width="2.3194444444444446in"
-height="0.9298523622047244in"}
+![](./media/image14.png)
 
 ### Step 3. Select ODBC
 
-![](./media/image15.png){width="2.3333333333333335in"
-height="0.37412073490813647in"}
+![](./media/image15.png)
 
 ### Step 4. Choose the ODBC connection we made earlier and name it...
 
-![](./media/image16.png){width="1.5879625984251968in"
-height="1.537930883639545in"}
+![](./media/image16.png)
 
 ### Step 5. Choose the database and collection we need from that connection
 
-![](./media/image17.png){width="3.986111111111111in"
-height="2.5560509623797025in"}
+![](./media/image17.png)
 
 ### Step 6. Add data and Generate Insights...
 
-![](./media/image18.png){width="3.3796292650918636in"
-height="2.1740113735783027in"}
+![](./media/image18.png)
 
 ### Step 7. Explore!
 
 By either using insights or directly building on the canvas, we can
 build our app exploring video games sales!
 
-![](./media/image19.png){width="4.050926290463692in"
-height="2.361742125984252in"}
+![](./media/image19.png)
 
 Summary & Conclusion
 ====================
