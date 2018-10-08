@@ -1,6 +1,3 @@
-![](./media/image1.png){width="3.9027777777777777in"
-height="2.341666666666667in"}
-
 Cosmos DB Overview
 ==================
 
@@ -9,6 +6,7 @@ Azure, and offers several API's. Currently, the SQL API is the most
 popular and widely used API. When you create a Cosmos DB Account, you
 must decide which API you want to use as the data will get stored in
 that format (exception being GremlinAPI which spans multiple APIs).
+![](./media/image1.png)
 
 Cosmos DB Key capabilities
 ==========================
