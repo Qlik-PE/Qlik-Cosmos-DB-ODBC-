@@ -1,12 +1,13 @@
 
 Cosmos DB Overview
 ==================
-![](./media/image1.png)
+
 Cosmos DB is a fast growing, multi-modal database service in Microsoft
 Azure offering several API's. Currently, the SQL API is the most popular
 and widely used API. When you create a Cosmos DB account, you must
 decide which API you want to use as the data will get stored in
 corresponding data model/format.
+![](./media/image1.png)
 
 Key Cosmos DB capabilities
 ==========================
