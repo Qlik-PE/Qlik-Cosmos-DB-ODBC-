@@ -1,14 +1,14 @@
+
 Cosmos DB Overview
 ==================
-
-Cosmos DB is a fast growing, multi-modal database service in Microsoft
-Azure, and offers several API's. Currently, the SQL API is the most
-popular and widely used API. When you create a Cosmos DB Account, you
-must decide which API you want to use as the data will get stored in
-that format (exception being GremlinAPI which spans multiple APIs).
 ![](./media/image1.png)
+Cosmos DB is a fast growing, multi-modal database service in Microsoft
+Azure offering several API's. Currently, the SQL API is the most popular
+and widely used API. When you create a Cosmos DB account, you must
+decide which API you want to use as the data will get stored in
+corresponding data model/format.
 
-Cosmos DB Key capabilities
+Key Cosmos DB capabilities
 ==========================
 
 -   Turnkey global distribution
@@ -36,10 +36,10 @@ Cosmos DB Key capabilities
 -   Multiple data models and popular APIs for accessing and querying
     > data
 
-    -   The atom-record-sequence (ARS) based data model that Azure
+    -   The underlying atom-record-sequence (ARS) data model that Azure
         > Cosmos DB is built on natively supports multiple data models,
-        > including but not limited to document, graph, key-value,
-        > table, and column-family data models.
+        > including document, graph, key-value, table, and column-family
+        > data models.
 
     -   APIs for the following data models are supported with SDKs
         > available in multiple languages:
@@ -47,20 +47,20 @@ Cosmos DB Key capabilities
         -   [SQL
             > API](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-introduction):
             > A schema-less JSON database engine with rich SQL querying
-            > capabilities.
+            > capabilities
 
         -   [MongoDB
             > API](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction):
             > A massively scalable *MongoDB-as-a-Service* powered by
             > Azure Cosmos DB platform. Compatible with existing MongoDB
-            > libraries, drivers, tools, and applications.
+            > libraries, drivers, tools, and applications
 
         -   [Cassandra
             > API](https://docs.microsoft.com/en-us/azure/cosmos-db/cassandra-introduction):
             > A globally distributed Cassandra-as-a-Service powered by
             > Azure Cosmos DB platform. Compatible with existing [Apache
             > Cassandra](https://cassandra.apache.org/) libraries,
-            > drivers, tools, and applications.
+            > drivers, tools, and applications
 
         -   [Gremlin
             > API](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction):
@@ -69,7 +69,7 @@ Cosmos DB Key capabilities
             > that work with highly connected datasets supporting Open
             > Gremlin APIs (based on the [Apache TinkerPop
             > specification](http://tinkerpop.apache.org/), Apache
-            > Gremlin).
+            > Gremlin)
 
         -   [Table
             > API](https://docs.microsoft.com/en-us/azure/cosmos-db/table-introduction):
@@ -79,14 +79,14 @@ Cosmos DB Key capabilities
             > storage applications without making any app changes.
 
 The SQL API can be interacted with using ODBC, REST, or native code
-bases such as .Net (Core and Standard), Java, Go, Node.js, or Python.
+bases such as .NET (Core and Standard), Java, Go, Node.js, or Python.
 
 There are many connectivity methods validated with Qlik Partner
 Engineering:
 
 a)  SQL API using ODBC Connector in Qlik Sense
 
-b)  MongoDB API using the Qlik Sense MongoDB Connector (Beta currently,
+b)  MongoDB API using the Qlik Sense MongoDB Connector (in Beta as of
     Oct 2018)
 
 c)  MongoDB SQL API using REST Connector in Qlik Sense
@@ -106,7 +106,9 @@ immediate insights and explore in any direction your intuition takes
 you. Unlike query-based tools, there's no pre-aggregated data and
 predefined queries to hold you back. That means you can ask new
 questions and create analytics without having to build new queries or
-wait for the experts. ![](./media/image2.png)
+wait for the experts.
+
+![](./media/image2.png){width="6.5in" height="2.4298611111111112in"}
 
 **Interactive analysis, without boundaries**
 
@@ -136,9 +138,9 @@ To learn more, go to <https://www.qlik.com/us/products/qlik-sense>
 Cosmos DB Setup
 ===============
 
-Setting up Cosmos DB is straightforward, once you pick your path. For
-this validation exercise, we are testing the SQL API (formerly
-documentDB) as our query engine for Qlik.
+Setting up a new Cosmos DB account is straightforward, once you pick
+your path. For this validation exercise, we are testing the SQL API
+(formerly DocumentDB) as our query engine for Qlik.
 
 ### Step 1. Sign into the Azure Portal -- Navigate to Cosmos DB
 
@@ -150,7 +152,7 @@ documentDB) as our query engine for Qlik.
 
 ### Step 3. Complete Project Details
 
-\- For this use case, we are selecting the SQL API.
+For this use case, we are selecting the SQL API.
 
 ![](./media/image5.png)
 
@@ -159,18 +161,20 @@ documentDB) as our query engine for Qlik.
 The process will run for a few minutes and we have our database!
 ![](./media/image6.png)
 
-Conversation - What is a RU?
-----------------------------
+Conversation - What is an RU?
+-----------------------------
 
 Cosmos DB is priced and scaled using a model called a "Request Unit" or
-RU. The RU defines how much compute and throughput you can use with the
-Cosmos DB instance. There are two modes, **Fixed** or **Unlimited**
-which govern the capacity of the system during use. You can learn more
-about how it works
+RU. The RU defines how much throughput (and corresponding hardware
+resources needed to provide it) you can use with the Cosmos DB instance.
+There are two modes, **Fixed** or **Unlimited** which govern the
+capacity of the document collection during use. You can learn more about
+how it works
 [here](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units).
-This setting will govern the upload and query capacity of the Cosmos DB
-system, so consideration must be given to expected workloads during the
-setup process as certain element cannot be changed after creation.
+This setting will govern the insert, update and query capacity (per
+second) of the Cosmos DB collection, so consideration must be given to
+expected workloads during the setup process as certain element cannot be
+changed after creation.
 
 Step 5. Create Database and Collection
 --------------------------------------
@@ -181,7 +185,7 @@ start by opening [Data Explorer]{.underline} in the menu.
 
 We need to create a New Database and a New Collection underneath that
 database. Here is where you will set your RU capacity. For this small
-data set and test, we'll go with 1000 RU.
+data set and test, we'll go with 1000 RU/s.
 
 Step 6. Loading Data
 --------------------
@@ -199,14 +203,14 @@ proceed.
 
 #### Data Transfer UI 
 
-Navigate to the unzipped folder, and run DTUI.exe. This will spawn the
+Navigate to the unzipped folder and run DTUI.exe. This will spawn the
 loader utility UI.
 
 ![](./media/image8.png)
 
 #### Source Information
 
-Select CSV File from the drop down in Source information setting...
+Select CSV File from the drop-down in Source information setting...
 Notice the utility supports a wide range of data source files and
 connections as sources.
 
@@ -239,7 +243,7 @@ loaded!
 
 ![](./media/image12.png)
 
-We have now completed our Cosmos DB setup.
+We have now completed our Cosmos DB database setup.
 
 Qlik Sense Configuration
 ========================
@@ -251,7 +255,7 @@ This is not covered in this guide, as we pre-assume a running Qlik Sense
 system. If you need to setup Qlik Sense -- please refer to this guide
 ([Install Qlik Sense on
 Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/qlik.qlik-sense))
-or download Qlik Sense desktop ([Qlik Sense
+or download Qlik Sense Desktop ([Qlik Sense
 Desktop](https://www.qlik.com/us/try-or-buy/download-qlik-sense)).
 
 Step 2. Download, Install & Configure ODBC driver 
@@ -265,24 +269,25 @@ require Schema Editing.
 
 ### ODBC Concerns
 
-It is important to understand that standard ANSI SQL and the SQL API
-(formerly documentDB) are not fully compliant because Cosmos DB is
-schema-less and well, SQL is structures. To that end, the SQL issued
-through the ODBC driver is being translated into a JSON object query
-method and that can cause issues. To try and prevent these translation
-issues, you might have to apply a "schema" that maps the conversions and
-data types. The ODBC driver page gives you suggestions and methods to
-help navigate this process. This mapping will have to occur for every
-database/collection inside a Cosmos DB instance.
+It is important to understand that the SQL API (formerly DocumentDB) is
+not fully ANSI SQL-compliant because Cosmos DB is schema-less and is not
+based on relational model, so some SQL syntax assuming relational
+capabilities is not applicable. To that end, the SQL statements issued
+through the ODBC driver are being translated into a Cosmos DB SQL
+dialect which doesn't have equivalents for all constructs. To try and
+prevent these translation issues, you might have to apply a "schema"
+that maps the conversions and data types. The ODBC driver page gives you
+suggestions and methods to help navigate this process. This mapping will
+have to occur for every database/collection inside a Cosmos DB account.
 
 Creating the Qlik Sense App 
 ============================
 
-### Step 1. Open Qlik Sense and create a new App
+### Step 1. Open Qlik Sense and create a new app
 
 ![](./media/image13.png)
 
-### Step 2. Select - Add data from Files and other sources
+### Step 2. Select - Add data from files and other sources
 
 ![](./media/image14.png)
 
@@ -290,7 +295,7 @@ Creating the Qlik Sense App
 
 ![](./media/image15.png)
 
-### Step 4. Choose the ODBC connection we made earlier and name it...
+### Step 4. Choose the ODBC connection we made earlier and name it
 
 ![](./media/image16.png)
 
@@ -298,13 +303,13 @@ Creating the Qlik Sense App
 
 ![](./media/image17.png)
 
-### Step 6. Add data and Generate Insights...
+### Step 6. Add data and generate Insights...
 
 ![](./media/image18.png)
 
 ### Step 7. Explore!
 
-By either using insights or directly building on the canvas, we can
+By either using Insights or directly building on the canvas, we can
 build our app exploring video games sales!
 
 ![](./media/image19.png)
@@ -313,7 +318,6 @@ Summary & Conclusion
 ====================
 
 This document shows how to use Qlik Sense with the Cosmos DB SQL API
-configuration with a step-by-step tutorial. The ODBC connector is the
-easiest driver to get going, but can be difficult with a complex
-document as the schema configuration and translation to SQL does add
-overhead RU cost.
+account with a step-by-step tutorial. The ODBC connector is the easiest
+driver to get going against a Cosmos DB dataset, but may require extra
+modelling to correctly map a schema configuration.
